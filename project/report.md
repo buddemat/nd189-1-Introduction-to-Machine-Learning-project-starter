@@ -8,7 +8,7 @@ I assume you mean that Kaggle does not accept counts below 0? However, on my fir
 Another change I had to make before I could predict at all was to drop the columns `casual` and `registered` from the training dataset, since they were not part of the test dataset.
 
 ### What was the top ranked model that performed?
-The top model was the level 3 ensemble ('WeightedEnsemble_L3'), wich seems logical, since it uses the other models and adds weights to improve performance.
+According to the `leaderboard()` function output, the top model was the level 3 ensemble ('WeightedEnsemble_L3'), wich seems logical, since it uses the other models and adds weights to improve performance. This is the model that is actually used, illustrated by the fact that using `fit()` with the parameter `model = 'WeightedEnsemble_L3'` produces the same scores as without any constraints on what model to use.
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?

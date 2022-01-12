@@ -19,12 +19,12 @@ The kaggle score improved (i.e. the RSMLE decreased) drastically from 1.39479 to
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-It didn't. I tried different HPO approaches, from changing the automatic hyperparameter tuning to manually specifying bag folds and stack levels. Hovever, performace dropped compared to the dataset with added features and automatic HPO. 
+It didn't. I tried different HPO approaches, from changing the automatic hyperparameter tuning to manually specifying bag folds and stack levels. Hovever, performace dropped or stayed more or less the same compared to the dataset with added features and automatic HPO. 
 
-This is not entirely surprising to me, as the documentation states that in order to maximize predictive performance of an ensemble, it is recommended to "_allow AutoGluon to adaptively select which models/hyperparameters to use_" as "_counterintuitively, hyperparameter tuning is not the best way to spend a limited training time budgets, as model ensembling is often superior_" (see https://auto.gluon.ai/stable/tutorials/tabular_prediction/tabular-quickstart.html#maximizing-predictive-performance).
+This is not entirely surprising to me, as the AutoGluon documentation/tutorial states that in order to maximize predictive performance of an ensemble, it is recommended to "_allow AutoGluon to adaptively select which models/hyperparameters to use_" as "_counterintuitively, hyperparameter tuning is not the best way to spend a limited training time budgets, as model ensembling is often superior_" (see https://auto.gluon.ai/stable/tutorials/tabular_prediction/tabular-quickstart.html#maximizing-predictive-performance).
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-I believe I would spend more time on data exploration and cleaning to try to improve performance.
+I believe I would spend more time on data exploration and cleaning to try to improve performance as well on playing around more with HPO to see if I can somehow get a better feeling on what and how to tune.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 |model               |features |time_limit |bag folds |stack levels |kaggle score|
@@ -37,15 +37,11 @@ I believe I would spend more time on data exploration and cleaning to try to imp
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
-TODO: Replace the image below with your own.
-
 ![model_train_score.png](img/model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
-TODO: Replace the image below with your own.
-
 ![model_test_score.png](img/model_test_score.png)
 
 ## Summary
-TODO: Add your explanation
+I found the excercise interesting and it illustrated some important aspects (like feature selection/engineering) very well. While I could follow the lessons on HPO, the matter remained a bit elusive throughout the project, since I could not produce better results than what was automatically delivered by using AutoGluon without explicit optimization. 
